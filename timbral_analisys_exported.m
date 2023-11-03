@@ -8,10 +8,11 @@
 % instrumentos, assim como um facilitador para outros projetos, que    % 
 % envolvem aplicações em MIR (Musical Information Retrieval) .         %
 %                                                                      %
-% Para baixar e ter acesso a essa aplicação, acesse o link abaixo :    %
-%                                                            
-%     
-%
+%  Para baixar e ter acesso a essa aplicação, acesse o link abaixo :   %
+%                                                                      %
+%       =======================================================        %
+%         https://github.com/jps-pereira/Timbral-Analysis.git          %
+%       =======================================================        %
 %                                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
