@@ -137,6 +137,7 @@ if app.StartEditField.Value == 0 && app.EndEditField.Value == 0
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
+    Sig = y;
 elseif app.StartEditField.Value == 0 && app.EndEditField.Value ~= 0
     Sig = y(1*F_sample:app.EndEditField.Value*F_sample,1);
 
@@ -166,6 +167,7 @@ elseif app.StartEditField.Value == 0 && app.EndEditField.Value ~= 0
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
+    Sig = y;
 elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value == 0 
     Sig = y(app.StartEditField.Value*F_sample:endaudio*F_sample,1);
     
@@ -194,6 +196,7 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value == 0
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
+    Sig = y;
 elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0 
 
     Sig = y(app.StartEditField.Value*F_sample:app.EndEditField.Value*F_sample,1);
@@ -224,6 +227,7 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
+    Sig = y;
 end
 
 app.Signal = Sig;
