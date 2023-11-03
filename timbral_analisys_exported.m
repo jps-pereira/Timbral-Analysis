@@ -1,22 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                        ====================                          %
-%                          Timbral Analysis                            %
-%                        ====================                          %
-%                                                                      %
-% O Código abaixo gera uma ferramenta para análise espectral de sinais %
-% de música, sendo um bom meio para o reconhecimento do timbre de      %
-% instrumentos, assim como um facilitador para outros projetos, que    % 
-% envolvem aplicações em MIR (Musical Information Retrieval) .         %
-%                                                                      %
-%  Para baixar e ter acesso a essa aplicação, acesse o link abaixo :   %
-%                                                                      %
-%       =======================================================        %
-%         https://github.com/jps-pereira/Timbral-Analysis.git          %
-%       =======================================================        %
-%                                                                      %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-classdef timbral_analisys_exported_2 < matlab.apps.AppBase
+classdef timbral_analisys_exported < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
@@ -58,15 +40,14 @@ classdef timbral_analisys_exported_2 < matlab.apps.AppBase
     end
 
 properties (Access = private)
-    Signal                 %Signal for temporal and frequencial representation
-    Signal_spectrogram     %Signal for spectrogram
-    Signal_mel             %Signal for mel spectrogram
-    Signal_features        %Signal for Spectral features
+    Signal                 % Signal for temporal and frequencial representation
+    Signal_spectrogram     % Signal for spectrogram
+    Signal_mel             % Signal for mel spectrogram
+    Signal_features        % Signal for Spectral features
     Sample_rate            % Fs
     Win                    % Window lenth
     duration               % Duration of audio signal
 end
-    
 
     % Callbacks that handle component events
     methods (Access = private)
@@ -79,10 +60,8 @@ end
 x = Signal(:,1);
 app.Name_audio.Value = filename;
 audio_info = audioinfo(filename)
-
-N = length(x);  % sample lenth
-slength = N/Fs; % total time span of audio signal
-
+N = length(x);        % sample lenth
+slength = N/Fs;       % total time span of audio signal
 app.Signal = x;
 app.Sample_rate = Fs;
 app.duration = slength;
@@ -91,19 +70,16 @@ app.duration = slength;
         % Value changed function: Name_audio
         function Name_audioValueChanged(app, event)
             value = app.Name_audio.Value;
-            
         end
 
         % Value changed function: StartEditField
         function StartEditFieldValueChanged(app, event)
-            value = app.StartEditField.Value;
-            
+            value = app.StartEditField.Value;         
         end
 
         % Value changed function: EndEditField
         function EndEditFieldValueChanged(app, event)
-            value = app.EndEditField.Value;
-            
+            value = app.EndEditField.Value;          
         end
 
         % Button pushed function: RunButton
@@ -133,14 +109,13 @@ if app.StartEditField.Value >= endaudio
 end    
 
 if app.StartEditField.Value == 0 && app.EndEditField.Value == 0 
-    
     Sig = y;
     
     % VETOR TEMPO
     n = length(Sig);
     t = (0:n-1)/ F_sample;
 
-    % VETOR FREQUÊNCIA
+    % VETOR FREQUENCIA
     fq = linspace(0, F_sample/2,floor(n/2)+1);
 
     % FFT
@@ -148,31 +123,28 @@ if app.StartEditField.Value == 0 && app.EndEditField.Value == 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do domínio do tempo');
+    title(app.Signal_Time,'Sinal do dominio do tempo');
     xlabel(app.Signal_Time,'tempo');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
-    %Frequência
+    %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequência');
+    xlabel(app.Signal_Frequency,'Frequencia');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Domínio da Frequência');
-    set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
-    
+    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
+    set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);    
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
-
 elseif app.StartEditField.Value == 0 && app.EndEditField.Value ~= 0
- 
     Sig = y(1*F_sample:app.EndEditField.Value*F_sample,1);
 
     % VETOR TEMPO
     n = length(Sig);
     t = (0:n-1)/ F_sample;
 
-    % VETOR FREQUÊNCIA
+    % VETOR FREQUENCIA
     fq = linspace(0, F_sample/2,floor(n/2)+1);
 
     % FFT
@@ -180,33 +152,28 @@ elseif app.StartEditField.Value == 0 && app.EndEditField.Value ~= 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.07,0.18,0.25]);
-    title(app.Signal_Time,'Sinal do domínio do tempo');
+    title(app.Signal_Time,'Sinal do dominio do tempo');
     xlabel(app.Signal_Time,'tempo');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
-    %Frequência
+    %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequência');
+    xlabel(app.Signal_Frequency,'Frequencia');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Domínio da Frequência');
+    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
-    
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
-    
-    Sig = y;
-    
 elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value == 0 
-
     Sig = y(app.StartEditField.Value*F_sample:endaudio*F_sample,1);
     
     % VETOR TEMPO
     n = length(Sig);
     t = (0:n-1)/ F_sample;
 
-    % VETOR FREQUÊNCIA
+    % VETOR FREQUENCIA
     fq = linspace(0, F_sample/2,floor(n/2)+1);
 
     % FFT
@@ -214,23 +181,19 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value == 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do domínio do tempo');
+    title(app.Signal_Time,'Sinal do dominio do tempo');
     xlabel(app.Signal_Time,'tempo');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
-
-    %Frequência
+    %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequência');
+    xlabel(app.Signal_Frequency,'Frequencia');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Domínio da Frequência');
+    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
-    
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
-    Sig = y;
-    
 elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0 
 
     Sig = y(app.StartEditField.Value*F_sample:app.EndEditField.Value*F_sample,1);
@@ -239,7 +202,7 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0
     n = length(Sig);
     t = (0:n-1)/ F_sample;
 
-    % VETOR FREQUÊNCIA
+    % VETOR FREQUENCIA
     fq = linspace(0, F_sample/2,floor(n/2)+1);
 
     % FFT
@@ -247,22 +210,20 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do domínio do tempo');
+    title(app.Signal_Time,'Sinal do dominio do tempo');
     xlabel(app.Signal_Time,'tempo');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
-    %Frequência
+    %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequência');
+    xlabel(app.Signal_Frequency,'Frequencia');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Domínio da Frequência');
+    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
-    
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
     app.Signal_features = Sig;
-    Sig = y;
 end
 
 app.Signal = Sig;
@@ -271,13 +232,11 @@ app.Signal = Sig;
         % Value changed function: axistime
         function axistimeValueChanged(app, event)
             value = app.axistime.Value;
-            
         end
 
         % Value changed function: axisfrequency
         function axisfrequencyValueChanged(app, event)
             value = app.axisfrequency.Value;
-            
         end
 
         % Button pushed function: Play
@@ -304,25 +263,21 @@ Sound = app.Signal;
         % Button pushed function: Pause
         function PauseButtonPushed(app, event)
             clear sound;
-          
         end
 
         % Value changed function: Windowlength
         function WindowlengthValueChanged(app, event)
-            value = app.Windowlength.Value;
-                
+            value = app.Windowlength.Value;     
         end
 
         % Value changed function: FFTpoints
         function FFTpointsValueChanged(app, event)
             value = app.FFTpoints.Value;
-            
         end
 
         % Value changed function: Hopsize
         function HopsizeValueChanged(app, event)
             value = app.Hopsize.Value;
-           
         end
 
         % Selection changed function: WindowButtonGroup
@@ -340,13 +295,11 @@ elseif app.HanningButton.Value
 else
     win = hanning(app.Windowlength.Value);
 end
-
 app.Win = win;
         end
 
         % Button pushed function: ComputeSTFT
         function ComputeSTFTButtonPushed(app, event)
-
 F_sample = app.Sample_rate;
 y = app.Signal_spectrogram;
 wlen = app.Win;                             % window function
@@ -356,62 +309,39 @@ Compute1 = false;
 Compute2 = false;
 
 if app.Hopsize.Value == 0
-    
-      %app.Hopsize.Value = 1024;
       f = msgbox("You didn't choose the Hop size, choose it","Atention","error");
-      
 elseif app.Hopsize.Value ~= 0
     Compute1 = true;
 end
-
 if app.FFTpoints.Value == 0
-    
-      %app.FFTpoints.Value = 2048;
-      f = msgbox("You didn't choose the FFT length, choose it","Atention","error");
-      
+      f = msgbox("You didn't choose the FFT length, choose it","Atention","error"); 
 elseif app.FFTpoints.Value ~= 0
     Compute2 = true;
 end
-
 if app.Windowlength.Value == 0
-     
-      %app.Windowlength.Value = 2048;
-      %wlen = hanning(app.Windowlength.Value);
-      f = msgbox("You didn't choose the Window or the Window length, choose it","Atention","error");
-      
+      f = msgbox("You didn't choose the Window or the Window length, choose it","Atention","error");     
 elseif app.Windowlength.Value ~= 0
     Compute = true;
 end
-
-
 if  Compute==true && Compute1==true && Compute2==true
-    
-    % PARÂMETROS DA STFT
+    % PARAMETROS DA STFT
              
     hop = app.Hopsize.Value;                    % hop size          
     nfft = app.FFTpoints.Value;                 % number of fft points
                                 
-    
     if wlen == hamming(app.Windowlength.Value)
-        
         figure('Name','Spectrogram - Hamming','NumberTitle','off');
         spectrogram(y,wlen,hop,nfft,F_sample,'yaxis');
         colormap('jet');
-
     elseif wlen == hanning(app.Windowlength.Value)
-        
         figure('Name','Spectrogram - Hanning','NumberTitle','off');
         spectrogram(y,wlen,hop,nfft,F_sample,'yaxis');
-        colormap('jet');
-        
+        colormap('jet'); 
     elseif wlen == kaiser(app.Windowlength.Value,2.5)
-        
         figure('Name','Spectrogram - Kaiser','NumberTitle','off');
         spectrogram(y,wlen,hop,nfft,F_sample,'yaxis');
         colormap('jet');
-        
     elseif wlen == blackman(app.Windowlength.Value)
-        
         figure('Name','Spectrogram - Blackman','NumberTitle','off');
         spectrogram(y,wlen,hop,nfft,F_sample,'yaxis');
         colormap('jet');
@@ -421,7 +351,6 @@ end
 
         % Button pushed function: ComputeMFCCs
         function ComputeMFCCsButtonPushed(app, event)
-
 F_sample = app.Sample_rate;
 y = app.Signal_mel;
 wlen = app.Win;                             % window choose
@@ -432,54 +361,34 @@ Compute2 = false;
 Compute3 = false;
 
 if app.Windowlength.Value == 0
-     
-      %app.Windowlength.Value = 2048;
-      %wlen = hanning(app.Windowlength.Value);
-      f = msgbox("You didn't choose the Window length, choose it","Atention","error");
-      
+      f = msgbox("You didn't choose the Window length, choose it","Atention","error");   
 elseif app.Windowlength.Value ~= 0
     Compute = true;
 end
-
 if app.Hopsize.Value == 0
-    
-      %app.Hopsize.Value = 1024;
       f = msgbox("You didn't choose the Hop size, choose it","Atention","error");
-      
 elseif app.Hopsize.Value ~= 0
     Compute1 = true;
 end
-
 if app.FFTpoints.Value == 0
-    
-      %app.FFTpoints.Value = 2048;
       f = msgbox("You didn't choose the FFT length, choose it","Atention","error");
-      
 elseif app.FFTpoints.Value ~= 0
     Compute2 = true;
 end
-
 if app.FilterBank.Value == 0
-    
-      %app.FilterBank.Value = 112;
       f = msgbox("You didn't choose the Number of bands, choose it","Atention","error");
-      
 elseif app.FilterBank.Value ~= 0
     Compute3 = true;
 end    
-                    
 if  Compute==true && Compute1==true && Compute2==true && Compute3==true
-
-        % PARÂMETROS DA STFT
+        % PARAMETROS DA STFT
                  
         hop = app.Hopsize.Value;                    % hop size          
         nfft = app.FFTpoints.Value;                 % number of fft points
-        Numbands = app.FilterBank.Value;            % Número de bandas do banco de filtros
+        Numbands = app.FilterBank.Value;            % Numero de bandas do banco de filtros
         
         % Mel-Spectrogram
-        
         if wlen == hamming(app.Windowlength.Value)
-        
             figure('Name','Melspectrogram - Hamming','NumberTitle','off');
             melSpectrogram(y,F_sample, ...
                            'Window',wlen, ...
@@ -487,9 +396,7 @@ if  Compute==true && Compute1==true && Compute2==true && Compute3==true
                            'FFTLength',nfft, ...
                            'NumBands',Numbands);
             colormap('jet');
-            
         elseif wlen == hanning(app.Windowlength.Value)
-            
             figure('Name','Melspectrogram - Hanning','NumberTitle','off');
             melSpectrogram(y,F_sample, ...
                            'Window',wlen, ...
@@ -497,9 +404,7 @@ if  Compute==true && Compute1==true && Compute2==true && Compute3==true
                            'FFTLength',nfft, ...
                            'NumBands',Numbands);
             colormap('jet');
-
         elseif wlen == kaiser(app.Windowlength.Value,2.5)
-            
             figure('Name','Melspectrogram - Kaiser','NumberTitle','off');
             melSpectrogram(y,F_sample, ...
                            'Window',wlen, ...
@@ -507,25 +412,21 @@ if  Compute==true && Compute1==true && Compute2==true && Compute3==true
                            'FFTLength',nfft, ...
                            'NumBands',Numbands);
              colormap('jet');
-
         elseif wlen == blackman(app.Windowlength.Value)
-            
             figure('Name','Melspectrogram - Blackman','NumberTitle','off');
             melSpectrogram(y,F_sample, ...
                            'Window',wlen, ...
                            'OverlapLength',hop, ...
                            'FFTLength',nfft, ...
                            'NumBands',Numbands);
-            colormap('jet');
-            
+            colormap('jet');  
         end      
  end         
         end
 
         % Value changed function: FilterBank
         function FilterBankValueChanged(app, event)
-            value = app.FilterBank.Value;
-            
+            value = app.FilterBank.Value;  
         end
 
         % Button pushed function: spectraldescriptors
@@ -944,7 +845,7 @@ xlabel('Time (s)')
     methods (Access = public)
 
         % Construct app
-        function app = timbral_analisys_exported_2
+        function app = timbral_analisys_exported
 
             % Create UIFigure and components
             createComponents(app)
