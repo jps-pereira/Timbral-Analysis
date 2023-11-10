@@ -498,12 +498,12 @@ ylabel('Spread')
 xlabel('Time (s)')
 
 subplot(2,2,2)
-plot(t7,flatness,'Color',[0,0,0])
+plot(t6,flatness,'Color',[0,0,0])
 ylabel('Flatness')
 xlabel('Time (s)')
 
 subplot(2,2,3)
-plot(t7,entropy,'Color',[0,0,0])
+plot(t8,entropy,'Color',[0,0,0])
 ylabel('Entropy')
 xlabel('Time (s)')
         end
