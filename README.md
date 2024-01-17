@@ -1,6 +1,6 @@
 > Status: Done
+> ![GitHub License](https://img.shields.io/github/license/jps-pereira/Timbral-Analysis)
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/jps-pereira/Timbral-Analysis/blob/main/LICENSE)
 
 <p align="center">
   <img width="150" height="150" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/0c070662-5439-4e7c-9a27-935ff9c96399">
