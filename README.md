@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="120" height="120" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/bad662b4-39aa-454a-a71d-d6271f7fc8e8">
+  <img width="120" height="120" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/12714c57-83fb-403d-8ca5-37cbf8edc8d8">
 </p>
 
 
