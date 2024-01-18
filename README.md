@@ -27,8 +27,27 @@ O processo de publicação de aplicativos criados no AppDesigner também é simp
 
 - Passo 1: Escolher o arquivo de áudio a ser lido no botão file. Ao escolher o arquivo, o nome do mesmo será exibido na caixa de texto, e informações sobre o áudio serão mostradas da command line do MATLAB.Executar a leitura do arquivo no botão Run, de forma que o sinal seja representado nos gráficos já expostos da interface, no domínio do tempo e no domínio da frequência usando o algoritmo de FFT. Caso o usuário não defina os limites os eixos nos sliders de tempo e frequência, uma caixa de mensagem aparecerá para orienta-lo a uma melhor decisão, além de, por padrão, usar o valor de 20 kHz para o eixo frequencial e 100 s para o eixo do tempo 
 
+<p align="center">
+  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/f8392552-41be-4293-89cb-81c4b0c08b5f">
+</p>
 
+- Passo 2: Caso seja necessário, é possível editar o áudio determinando o instante de começo e fim nas caixas de texto \textit{Start} e \textit{End}, essa etapa altera o sinal em definitivo para todas as funções posteriores, diferente dos \textit{sliders} que apenas mostram os trechos desejados de acordo com seus valores. Com a edição do áudio feita ou não, é possível ouvir o áudio lido através dos botões de \textit{play} e \textit{pause.} \ref{fig:Passo2}.
 
+<p align="center">
+  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/6659a1a4-5bee-4007-9f7e-4ce48f5b814a">
+</p>
+
+- Passo 3: Defina os parâmetros de janelamento e banco de filtros para a extração dos recursos de espectrograma e \acrshort{mel}-espectrograma, caso algum parâmetro não seja definido, uma mensagem de erro alertará o usuário sobre qual parâmetro ele deve preencher \ref{fig:Passo3}.
+
+<p align="center">
+  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/3c961bd0-4768-4cb3-a7ad-4e0324ac9f24">
+</p>
+
+- Passo 4: Etapa final de extração dos recursos fazendo uso dos botões \textit{Spec}, \textit{Mel-spec} e \textit{Features}, sendo possível a alteração dos parâmetros para uma nova extração de recursos, tornando a análise mais cuidadosa \ref{fig:Passo4}.
+
+<p align="center">
+  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
+</p>
 
 ## Development ideas
 
