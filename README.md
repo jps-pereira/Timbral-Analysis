@@ -14,5 +14,11 @@ O Código e arquivo de instalação MATLAB gera uma ferramenta para análise esp
 
 ## Development ideas
 
+- Instrument classification;
+- Gender recognition;
+- Analysis of audio on real time (not recorded);
+- Separation of source (musical instruments);
+- Analysis Of noises.
+
 ## Author
 > João Pedro Pereira <div> <a href="https://www.linkedin.com/in/joaopedro-pereira-/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href = "mailto:jp_pereira@id.uff.br"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a> </div>
