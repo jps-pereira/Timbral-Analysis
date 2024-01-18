@@ -7,10 +7,21 @@
 </p>
 
 ## Project
+Para atingir o resultado apresentado nesse repositório as fases importantes do projeto foram as seguintes:
 
-O Código e arquivo de instalação MATLAB gera uma ferramenta para análise espectral de sinais de música, sendo um bom meio para o reconhecimento do timbre de instrumentos, assim como um facilitador para outros projetos, que envolvem aplicações em MIR (Musical Information Retrieval).
+- Uso das ferramentas principais para análise do timbre, como os espectrogramas, mel-espectrogramas e as características espectrais.
+- Desenvolvimento da interface gráfica: Para reunir as ferramentas desenvolvidas na etapa anterior, de forma fácil e interativa, foi desenvolvida uma interface gráfica de
+usuário [GUI](https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador) no software [MATLAB](https://www.mathworks.com/products/matlab.html) através da ferramenta [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html), capaz de auxiliar o processo de análise agrupando os resultados obtidos.
+
+O App Designer é uma ferramenta [MATLAB](https://www.mathworks.com/products/matlab.html), que viabiliza a criação de interfaces de aplicativos gráficos. Com o [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html), os usuários têm a capacidade de projetar interfaces de usuário com uma variedade de elementos gráficos, como botões, caixas de texto, gráficos, barras de progresso, e muito mais. Isso permite a criação de aplicativos visualmente atraentes e interativos que podem ser usados para tarefas como análise de dados, simulação, controle de sistemas e visualização de resultados.
+
+O processo de publicação de aplicativos criados no [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html) também é simplificado, permitindo que os usuários compartilhem seus aplicativos com outras pessoas. Os aplicativos podem ser publicados como aplicativos autônomos ou integrados em um ambiente [MATLAB](https://www.mathworks.com/products/matlab.html) existente. O arquivo de instalação **.mlappinstall** está neste repositório, a instalação integrará o aplicativo desenvolvido ao software [MATLAB](https://www.mathworks.com/products/matlab.html). Além disso, o código-fonte está disponível neste repositório como **timbral_analisys_exported.m**
+
+O Código e arquivo de instalação [MATLAB](https://www.mathworks.com/products/matlab.html) gera uma ferramenta para análise espectral de sinais de música, sendo um bom meio para o reconhecimento do timbre de instrumentos, assim como um facilitador para outros projetos, que envolvem aplicações em [MIR](https://musicinformationretrieval.com/) (Musical Information Retrieval).
 
 ## How to use
+
+
 
 ## Development ideas
 
