@@ -3,7 +3,7 @@
 > ![GitHub License](https://img.shields.io/github/license/jps-pereira/Timbral-Analysis)
 
 <p align="center">
-  <img width="150" height="150" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/dbbc94e1-c434-45b9-9220-a27a4c79ff8a">
+  <img width="150" height="150" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/7de5ae40-eeb2-4143-888c-b19b42929616">
 </p>
 
 ## Project
