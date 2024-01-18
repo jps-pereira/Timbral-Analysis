@@ -8,15 +8,14 @@
 
 ## Project
 
-Para atingir o resultado apresentado nesse repositório as fases importantes do projeto foram as seguintes:
+To achieve the results presented in this repository, the important phases of the project were as follows:
 
-- Uso das ferramentas principais para análise do timbre, como os espectrogramas, mel-espectrogramas e as características espectrais.
-- Desenvolvimento da interface gráfica: Para reunir as ferramentas desenvolvidas na etapa anterior, de forma fácil e interativa, foi desenvolvida uma interface gráfica de
-usuário [GUI](https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador) no software [MATLAB](https://www.mathworks.com/products/matlab.html) através da ferramenta [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html), capaz de auxiliar o processo de análise agrupando os resultados obtidos.
+- Use of main tools for timbre analysis, such as spectrograms, mel spectrograms, and spectral features.
+- Development of the graphical interface: To bring together the tools developed in the previous stage in an easy and interactive manner, a graphical user interface [GUI](https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador) was developed using the [MATLAB](https://www.mathworks.com/products/matlab.html) software through the [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html) tool. This interface assists in the analysis process by grouping the obtained results.
 
-O App Designer é uma ferramenta MATLAB, que viabiliza a criação de interfaces de aplicativos gráficos. Com o AppDesignerdesigner, os usuários têm a capacidade de projetar interfaces de usuário com uma variedade de elementos gráficos, como botões, caixas de texto, gráficos, barras de progresso, e muito mais. Isso permite a criação de aplicativos visualmente atraentes e interativos que podem ser usados para tarefas como análise de dados, simulação, controle de sistemas e visualização de resultados.
+App Designer is a MATLAB tool that enables the creation of graphical application interfaces. With AppDesigner, users can design user interfaces with a variety of graphical elements, such as buttons, text boxes, graphs, progress bars, and more. This allows for the creation of visually appealing and interactive applications that can be used for tasks such as data analysis, simulation, system control, and result visualization.
 
-O processo de publicação de aplicativos criados no AppDesigner também é simplificado, permitindo que os usuários compartilhem seus aplicativos com outras pessoas. Os aplicativos podem ser publicados como aplicativos autônomos ou integrados em um ambiente MATLAB existente. O arquivo de instalação <code>.mlappinstall</code> está neste repositório, a instalação integrará o aplicativo desenvolvido ao software MATLAB previamente instalado. Além disso, o código-fonte está disponível neste repositório como <code>timbral_analisys_exported.m</code>. O Código e arquivo de instalação MATLAB geram uma ferramenta para análise espectral de sinais de música, sendo um bom meio para o reconhecimento do timbre de instrumentos, assim como um facilitador para outros projetos, que envolvem aplicações em [MIR](https://musicinformationretrieval.com/) (Musical Information Retrieval).
+The process of publishing applications created in AppDesigner is also simplified, allowing users to share their applications with others. Applications can be published as standalone apps or integrated into an existing MATLAB environment. The installation file <code>.mlappinstall</code> is in this repository; the installation will integrate the developed application into the previously installed MATLAB software. Additionally, the source code is available in this repository as <code>timbral_analisys_exported.m</code>. The MATLAB code and installation file generate a tool for spectral analysis of music signals, serving as a useful means for instrument timbre recognition and facilitating other projects related to applications in [MIR](https://musicinformationretrieval.com/) (Musical Information Retrieval).
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/ed1accc7-aeaa-45ec-b15a-5cd6a50f89d3">
@@ -25,28 +24,28 @@ O processo de publicação de aplicativos criados no AppDesigner também é simp
 
 ## How to use
 
-- Passo 1: Escolher o arquivo de áudio a ser lido no botão file. Ao escolher o arquivo, o nome do mesmo será exibido na caixa de texto, e informações sobre o áudio serão mostradas da command line do MATLAB.Executar a leitura do arquivo no botão Run, de forma que o sinal seja representado nos gráficos já expostos da interface, no domínio do tempo e no domínio da frequência usando o algoritmo de FFT. Caso o usuário não defina os limites os eixos nos sliders de tempo e frequência, uma caixa de mensagem aparecerá para orienta-lo a uma melhor decisão, além de, por padrão, usar o valor de 20 kHz para o eixo frequencial e 100 s para o eixo do tempo.
-
+- Step 1: Choose the audio file to be read using the file button. Upon selecting the file, its name will be displayed in the text box, and information about the audio will be shown in the MATLAB command line. Execute the file reading by clicking the <code>Run</code> button , so that the signal is represented on the already displayed graphs in the interface, in both the time and frequency domains using the FFT algorithm. If the user does not set limits on the time and frequency <code>Sliders</code>, a message box will appear to guide them towards a better decision, and by default, the frequency axis will use the value of 20 kHz, and the time axis will use 100 s.
+- 
 <p align="center">
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/f8392552-41be-4293-89cb-81c4b0c08b5f">
 </p>
 
-- Passo 2: Caso seja necessário, é possível editar o áudio determinando o instante de começo e fim nas caixas de texto <code>Start</code> e <code>End</code>, essa etapa altera o sinal em definitivo para todas as funções posteriores, diferente dos <code>sliders</code> que apenas mostram os trechos desejados de acordo com seus valores. Com a edição do áudio feita ou não, é possível ouvir o áudio lido através dos botões de <code>play</code> e <code>pause</code>.
+- Step 2: If necessary, you can edit the audio by specifying the start and end times in the <code>Start</code> and <code>End</code> text boxes. This step permanently alters the signal for all subsequent functions, unlike the <code>sliders</code> that only display the desired segments based on their values. Whether or not the audio is edited, you can listen to the played audio using the <code>play</code> and <code>pause</code> buttons.
 
 <p align="center">
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/6659a1a4-5bee-4007-9f7e-4ce48f5b814a">
 </p>
 
-- Passo 3: Defina os parâmetros de janelamento e banco de filtros para a extração dos recursos de espectrograma e mel-espectrograma, caso algum parâmetro não seja definido, uma mensagem de erro alertará o usuário sobre qual parâmetro ele deve preencher.
+- Step 3: Define the windowing and filter bank parameters for extracting spectrogram and mel-spectrogram features. If any parameter is not specified, an error message will alert the user about which parameter needs to be filled in.
 
 <p align="center">
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/3c961bd0-4768-4cb3-a7ad-4e0324ac9f24">
 </p>
 
-- Passo 4: Etapa final de extração dos recursos fazendo uso dos botões <code>Spec</code>, <code>Mel-spec</code> e <code>Features</code>, sendo possível a alteração dos parâmetros para uma nova extração de recursos, tornando a análise mais cuidadosa.
+- Step 4: Final stage of feature extraction using the <code>Spec</code>, <code>Mel-spec</code>, and <code>Features</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
 
 <p align="center">
-  <img width="550" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
+  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
 </p>
 
 ## Development ideas
