@@ -25,7 +25,7 @@ O processo de publicação de aplicativos criados no AppDesigner também é simp
 
 ## How to use
 
-- Passo 1: Escolher o arquivo de áudio a ser lido no botão file. Ao escolher o arquivo, o nome do mesmo será exibido na caixa de texto, e informações sobre o áudio serão mostradas da command line do MATLAB.Executar a leitura do arquivo no botão Run, de forma que o sinal seja representado nos gráficos já expostos da interface, no domínio do tempo e no domínio da frequência usando o algoritmo de FFT. Caso o usuário não defina os limites os eixos nos sliders de tempo e frequência, uma caixa de mensagem aparecerá para orienta-lo a uma melhor decisão, além de, por padrão, usar o valor de 20 kHz para o eixo frequencial e 100 s para o eixo do tempo 
+- Passo 1: Escolher o arquivo de áudio a ser lido no botão file. Ao escolher o arquivo, o nome do mesmo será exibido na caixa de texto, e informações sobre o áudio serão mostradas da command line do MATLAB.Executar a leitura do arquivo no botão Run, de forma que o sinal seja representado nos gráficos já expostos da interface, no domínio do tempo e no domínio da frequência usando o algoritmo de FFT. Caso o usuário não defina os limites os eixos nos sliders de tempo e frequência, uma caixa de mensagem aparecerá para orienta-lo a uma melhor decisão, além de, por padrão, usar o valor de 20 kHz para o eixo frequencial e 100 s para o eixo do tempo.
 
 <p align="center">
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/f8392552-41be-4293-89cb-81c4b0c08b5f">
