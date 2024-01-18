@@ -46,7 +46,7 @@ O processo de publicação de aplicativos criados no AppDesigner também é simp
 - Passo 4: Etapa final de extração dos recursos fazendo uso dos botões \textit{Spec}, \textit{Mel-spec} e \textit{Features}, sendo possível a alteração dos parâmetros para uma nova extração de recursos, tornando a análise mais cuidadosa \ref{fig:Passo4}.
 
 <p align="center">
-  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
+  <img width="500" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
 </p>
 
 ## Development ideas
