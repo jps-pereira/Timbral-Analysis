@@ -7,6 +7,7 @@
 </p>
 
 ## Project
+
 Para atingir o resultado apresentado nesse repositório as fases importantes do projeto foram as seguintes:
 
 - Uso das ferramentas principais para análise do timbre, como os espectrogramas, mel-espectrogramas e as características espectrais.
