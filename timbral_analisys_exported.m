@@ -1,3 +1,19 @@
+              
+                % % % % % % % % % % %               
+                %  Timbral analysis %               
+                % % % % % % % % % % %  
+
+%-------------------------------------------------- %
+%     J.P. Pereira, V. Fernandes, T.N. Ferreira     %
+%       TET -  Universidade Federal Fluminense      %
+%---------------------------------------------------%
+%  This code was developed as a practical part of   %   
+%  my graduation thesis, it is a code exported from %
+%  the App Designer tool, for more information      %
+%  about how it works visit the link below:         %
+%  mathworks.com/products/matlab/app-designer.html  %          
+% --------------------------------------------------%
+
 classdef timbral_analisys_exported < matlab.apps.AppBase
 
     % Properties that correspond to app components
