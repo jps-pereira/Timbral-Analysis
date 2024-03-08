@@ -14,7 +14,7 @@
 %  mathworks.com/products/matlab/app-designer.html  %          
 % --------------------------------------------------%
 
-classdef timbral_analisys_exported < matlab.apps.AppBase
+classdef timbral_analisys_exported_new < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
@@ -23,7 +23,7 @@ classdef timbral_analisys_exported < matlab.apps.AppBase
         Signal_Frequency              matlab.ui.control.UIAxes
         WindowlengthEditField_2Label  matlab.ui.control.Label
         Windowlength                  matlab.ui.control.NumericEditField
-        HopsizeEditFieldLabel         matlab.ui.control.Label
+        OverlapLabel                  matlab.ui.control.Label
         Hopsize                       matlab.ui.control.NumericEditField
         FFTpointsLabel                matlab.ui.control.Label
         FFTpoints                     matlab.ui.control.NumericEditField
@@ -583,16 +583,15 @@ xlabel('Time (s)')
             app.Windowlength.FontWeight = 'bold';
             app.Windowlength.Position = [291 90 120 22];
 
-            % Create HopsizeEditFieldLabel
-            app.HopsizeEditFieldLabel = uilabel(app.TimbralanalysisUIFigure);
-            app.HopsizeEditFieldLabel.BackgroundColor = [0.0706 0.1804 0.251];
-            app.HopsizeEditFieldLabel.HorizontalAlignment = 'center';
-            app.HopsizeEditFieldLabel.VerticalAlignment = 'bottom';
-            app.HopsizeEditFieldLabel.FontName = 'Arial';
-            app.HopsizeEditFieldLabel.FontSize = 10;
-            app.HopsizeEditFieldLabel.FontColor = [1 1 1];
-            app.HopsizeEditFieldLabel.Position = [291 71 55 13];
-            app.HopsizeEditFieldLabel.Text = 'Hop size';
+            % Create OverlapLabel
+            app.OverlapLabel = uilabel(app.TimbralanalysisUIFigure);
+            app.OverlapLabel.BackgroundColor = [0.0706 0.1804 0.251];
+            app.OverlapLabel.HorizontalAlignment = 'center';
+            app.OverlapLabel.FontName = 'Arial';
+            app.OverlapLabel.FontSize = 10;
+            app.OverlapLabel.FontColor = [1 1 1];
+            app.OverlapLabel.Position = [291 69 55 15];
+            app.OverlapLabel.Text = 'Overlap';
 
             % Create Hopsize
             app.Hopsize = uieditfield(app.TimbralanalysisUIFigure, 'numeric');
@@ -865,7 +864,7 @@ xlabel('Time (s)')
     methods (Access = public)
 
         % Construct app
-        function app = timbral_analisys_exported
+        function app = timbral_analisys_exported_new
 
             % Create UIFigure and components
             createComponents(app)

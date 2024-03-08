@@ -1,0 +1,107 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="2868680797" file="C:\Users\joaop\Documents\Documentos\TCC\Códigos\App\timbral_analysis.prj" location="C:\Users\joaop\Documents\Documentos\TCC\Códigos\App" name="timbral_analysis" target="target.mlapps" target-name="Package App">
+    <param.appname>timbral_analysis</param.appname>
+    <param.authnamewatermark>João Pedro Pereira</param.authnamewatermark>
+    <param.email>jp_pereira@id.uff.br</param.email>
+    <param.company>Universidade Federal Fluminense</param.company>
+    <param.icon>${PROJECT_ROOT}\timbral_analysis_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_16.png</file>
+    </param.icons>
+    <param.summary />
+    <param.description>The installation file generate a tool for spectral analysis of music signals, serving as a useful means for instrument timbre recognition and facilitating other projects related to applications in MIR (Musical Information Retrieval).</param.description>
+    <param.screenshot>C:\Users\joaop\AppData\Local\Temp\tp8eaadf9d_c869_43db_ac8f_949c5b8b09d5.png</param.screenshot>
+    <param.version>4.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>9405f2d0-3af5-4fd5-a85a-10ba9e8362fc</param.guid>
+    <unset>
+      <param.summary />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\timbral_analisys.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\botao-play.png</file>
+      <file>${PROJECT_ROOT}\pausa.png</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\joaop\Documents\Documentos\TCC\Códigos" name="App" optional="false">C:\Users\joaop\Documents\Documentos\TCC\Códigos\App</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\Polyspace\R2020a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+        <toolbox name="polyspacebugfinder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
