@@ -18,7 +18,8 @@ App Designer is a MATLAB tool that enables the creation of graphical application
 The process of publishing applications created in AppDesigner is also simplified, allowing users to share their applications with others. Applications can be published as standalone apps or integrated into an existing MATLAB environment. The installation file <code>.mlappinstall</code> is in this repository; the installation will integrate the developed application into the previously installed MATLAB software. Additionally, the source code is available in this repository as <code>timbral_analisys_exported.m</code> and the file used on Appbuilder as <code>timbral_analysis.mlapp</code>. The MATLAB code and installation file generate a tool for spectral analysis of music signals, serving as a useful means for instrument timbre recognition and facilitating other projects related to applications in [MIR](https://musicinformationretrieval.com/) (Musical Information Retrieval).
 
 <p align="center">
-  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/ed1accc7-aeaa-45ec-b15a-5cd6a50f89d3">
+  <img width="400" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/64feeddc-d43b-42e2-b811-028b7c9fb0c1">
+
 </p>
 
 
@@ -27,25 +28,25 @@ The process of publishing applications created in AppDesigner is also simplified
 - Step 1: Choose the audio file to be read using the file button. Upon selecting the file, its name will be displayed in the text box, and information about the audio will be shown in the MATLAB command line. Execute the file reading by clicking the <code>Run</code> button , so that the signal is represented on the already displayed graphs in the interface, in both the time and frequency domains using the FFT algorithm. If the user does not set limits on the time and frequency <code>sliders</code>, a message box will appear to guide them towards a better decision, and by default, the frequency axis will use the value of 20 kHz, and the time axis will use 100 s.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/f8392552-41be-4293-89cb-81c4b0c08b5f">
+  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/45d7ff35-8f6e-4bef-9dc5-8a741ea311c5">
 </p>
 
 - Step 2: If necessary, you can edit the audio by specifying the start and end times in the <code>Start</code> and <code>End</code> text boxes. This step permanently alters the signal for all subsequent functions, unlike the <code>sliders</code> that only display the desired segments based on their values. Whether or not the audio is edited, you can listen to the played audio using the <code>play</code> and <code>pause</code> buttons.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/6659a1a4-5bee-4007-9f7e-4ce48f5b814a">
+  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/6b70e716-b77d-4738-9f0f-528d5278c4ce">
 </p>
 
 - Step 3: Define the windowing and filter bank parameters for extracting spectrogram and mel-spectrogram features. If any parameter is not specified, an error message will alert the user about which parameter needs to be filled in.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/3c961bd0-4768-4cb3-a7ad-4e0324ac9f24">
+  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/91dc2f43-d8dc-4535-a0db-5ff9b8fa7fb0">
 </p>
 
 - Step 4: Final stage of feature extraction using the <code>Spec</code>, <code>Mel-spec</code>, and <code>Features</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
 
 <p align="center">
-  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/cdee35b1-e1bf-4238-832a-ed34e05bfd6e">
+  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/1453c6fe-e0ea-4f31-b1e3-7ea057fcb05c">
 </p>
 
 ## Development ideas
