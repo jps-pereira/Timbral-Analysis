@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="2868680797" file="C:\Users\joaop\Documents\Documentos\TCC\Códigos\App\timbral_analysis.prj" location="C:\Users\joaop\Documents\Documentos\TCC\Códigos\App" name="timbral_analysis" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1491860808" file="C:\Users\joaop\Documents\Documentos\TCC\Recursos\App\timbral_analysis.prj" location="C:\Users\joaop\Documents\Documentos\TCC\Recursos\App" name="timbral_analysis" target="target.mlapps" target-name="Package App">
     <param.appname>timbral_analysis</param.appname>
     <param.authnamewatermark>João Pedro Pereira</param.authnamewatermark>
     <param.email>jp_pereira@id.uff.br</param.email>
@@ -12,8 +12,8 @@
     </param.icons>
     <param.summary />
     <param.description>The installation file generate a tool for spectral analysis of music signals, serving as a useful means for instrument timbre recognition and facilitating other projects related to applications in MIR (Musical Information Retrieval).</param.description>
-    <param.screenshot>C:\Users\joaop\AppData\Local\Temp\tp8eaadf9d_c869_43db_ac8f_949c5b8b09d5.png</param.screenshot>
-    <param.version>4.0</param.version>
+    <param.screenshot>C:\Users\joaop\AppData\Local\Temp\tp8aed5cd9_a9e1_4406_b183_1ce003caf413.png</param.screenshot>
+    <param.version>5.0</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -38,7 +38,7 @@
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\joaop\Documents\Documentos\TCC\Códigos" name="App" optional="false">C:\Users\joaop\Documents\Documentos\TCC\Códigos\App</file>
+      <file location="C:\Users\joaop\Documents\Documentos\TCC\Recursos" name="App" optional="false">C:\Users\joaop\Documents\Documentos\TCC\Recursos\App</file>
     </build-deliverables>
     <workflow />
     <matlab>

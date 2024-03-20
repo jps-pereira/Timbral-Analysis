@@ -1,4 +1,3 @@
-              
                 % % % % % % % % % % %               
                 %  Timbral analysis %               
                 % % % % % % % % % % %  
@@ -13,8 +12,7 @@
 %  about how it works visit the link below:         %
 %  mathworks.com/products/matlab/app-designer.html  %          
 % --------------------------------------------------%
-
-classdef timbral_analisys_exported_new < matlab.apps.AppBase
+classdef timbral_analisys_exported < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
@@ -49,7 +47,6 @@ classdef timbral_analisys_exported_new < matlab.apps.AppBase
         HanningButton                 matlab.ui.control.RadioButton
         FilterbankLabel               matlab.ui.control.Label
         FilterBank                    matlab.ui.control.NumericEditField
-        spectraldescriptors           matlab.ui.control.Button
         RunButton                     matlab.ui.control.Button
         FileButton                    matlab.ui.control.Button
         sLabel_4                      matlab.ui.control.Label
@@ -449,79 +446,9 @@ if  Compute==true && Compute1==true && Compute2==true && Compute3==true
             value = app.FilterBank.Value;  
         end
 
-        % Button pushed function: spectraldescriptors
+        % Callback function
         function spectraldescriptorsButtonPushed(app, event)
-F_sample = app.Sample_rate; 
-y = app.Signal_features;
 
-rolloff = spectralRolloffPoint(y,F_sample);
-t1 = linspace(0,size(y,1)/F_sample,size(rolloff,1));
-
-Slope = spectralSlope(y,F_sample);
-t2 = linspace(0,size(y,1)/F_sample,size(Slope,1));
-
-Decrease = spectralDecrease(y,F_sample);
-t3 = linspace(0,size(y,1)/F_sample,size(Decrease,1));
-
-Centroid = spectralCentroid(y,F_sample);
-t4 = linspace(0,size(y,1)/F_sample,size(Centroid,1));
-
-flux = spectralFlux(y,F_sample);
-t5 = linspace(0,size(y,1)/F_sample,size(flux,1));
-
-flatness = spectralFlatness(y,F_sample);
-t6 = linspace(0,size(y,1)/F_sample,size(flatness,1));
-
-spread = spectralSpread(y,F_sample);
-t7 = linspace(0,size(y,1)/F_sample,size(spread,1));            
-
-entropy = spectralEntropy(y,F_sample);
-t8 = linspace(0,size(y,1)/F_sample,size(entropy,1));
-
-%========================================================%
-       
-figure('Name','Spectral Features','NumberTitle','off');
-subplot(2,2,2)
-plot(t1,rolloff,'Color',[0.07,0.18,0.25])
-ylabel('Rolloff Point')
-xlabel('Time (s)')
-
-subplot(2,2,4)
-plot(t2,Slope,'Color',[0.07,0.18,0.25])
-ylabel('Slope')
-xlabel('Time (s)')
-
-subplot(2,2,3)
-plot(t3,Decrease,'Color',[0.07,0.18,0.25])
-ylabel('Decrease')
-xlabel('Time (s)')
-
-subplot(2,2,1)
-plot(t4,Centroid,'Color',[0.07,0.18,0.25])
-ylabel('Centroid')
-
-%========================================================%
-
-figure('Name','Spectral Features','NumberTitle','off');
-subplot(2,2,4)
-plot(t5,flux,'Color',[0,0,0])
-ylabel('Flux')
-xlabel('Time (s)')
-
-subplot(2,2,1)
-plot(t7,spread,'Color',[0,0,0])
-ylabel('Spread')
-xlabel('Time (s)')
-
-subplot(2,2,2)
-plot(t6,flatness,'Color',[0,0,0])
-ylabel('Flatness')
-xlabel('Time (s)')
-
-subplot(2,2,3)
-plot(t8,entropy,'Color',[0,0,0])
-ylabel('Entropy')
-xlabel('Time (s)')
         end
     end
 
@@ -630,8 +557,8 @@ xlabel('Time (s)')
             app.ComputeSTFT.FontSize = 11;
             app.ComputeSTFT.FontWeight = 'bold';
             app.ComputeSTFT.FontColor = [0.9412 0.9412 0.9412];
-            app.ComputeSTFT.Position = [583 13 60 30];
-            app.ComputeSTFT.Text = 'Spec';
+            app.ComputeSTFT.Position = [583 13 80 30];
+            app.ComputeSTFT.Text = 'Spectrogram';
 
             % Create ComputeMFCCs
             app.ComputeMFCCs = uibutton(app.TimbralanalysisUIFigure, 'push');
@@ -641,15 +568,15 @@ xlabel('Time (s)')
             app.ComputeMFCCs.FontSize = 11;
             app.ComputeMFCCs.FontWeight = 'bold';
             app.ComputeMFCCs.FontColor = [0.9412 0.9412 0.9412];
-            app.ComputeMFCCs.Position = [648 13 60 30];
-            app.ComputeMFCCs.Text = 'Mel- Spec';
+            app.ComputeMFCCs.Position = [672 13 101 30];
+            app.ComputeMFCCs.Text = 'Mel- Spectrogram';
 
             % Create Play
             app.Play = uibutton(app.TimbralanalysisUIFigure, 'push');
             app.Play.ButtonPushedFcn = createCallbackFcn(app, @PlayButtonPushed, true);
             app.Play.Icon = 'botao-play.png';
             app.Play.IconAlignment = 'center';
-            app.Play.Position = [583 56 90 30];
+            app.Play.Position = [583 56 80 30];
             app.Play.Text = '';
 
             % Create Pause
@@ -657,7 +584,7 @@ xlabel('Time (s)')
             app.Pause.ButtonPushedFcn = createCallbackFcn(app, @PauseButtonPushed, true);
             app.Pause.Icon = 'pausa.png';
             app.Pause.IconAlignment = 'center';
-            app.Pause.Position = [683 56 90 30];
+            app.Pause.Position = [672 56 101 30];
             app.Pause.Text = '';
 
             % Create Name_audio
@@ -814,17 +741,6 @@ xlabel('Time (s)')
             app.FilterBank.FontWeight = 'bold';
             app.FilterBank.Position = [291 9 120 22];
 
-            % Create spectraldescriptors
-            app.spectraldescriptors = uibutton(app.TimbralanalysisUIFigure, 'push');
-            app.spectraldescriptors.ButtonPushedFcn = createCallbackFcn(app, @spectraldescriptorsButtonPushed, true);
-            app.spectraldescriptors.BackgroundColor = [0.0706 0.1804 0.251];
-            app.spectraldescriptors.FontName = 'Arial';
-            app.spectraldescriptors.FontSize = 11;
-            app.spectraldescriptors.FontWeight = 'bold';
-            app.spectraldescriptors.FontColor = [0.9412 0.9412 0.9412];
-            app.spectraldescriptors.Position = [713 13 61 30];
-            app.spectraldescriptors.Text = 'Features';
-
             % Create RunButton
             app.RunButton = uibutton(app.TimbralanalysisUIFigure, 'push');
             app.RunButton.ButtonPushedFcn = createCallbackFcn(app, @RunButtonPushed, true);
@@ -864,7 +780,7 @@ xlabel('Time (s)')
     methods (Access = public)
 
         % Construct app
-        function app = timbral_analisys_exported_new
+        function app = timbral_analisys_exported
 
             % Create UIFigure and components
             createComponents(app)
