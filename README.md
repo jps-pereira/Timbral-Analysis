@@ -45,7 +45,7 @@ The process of publishing applications created in AppDesigner is also simplified
 - Step 4: Final stage of feature extraction using the <code>Spec</code>, <code>Mel-spec</code>, and <code>Features</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
 
 <p align="center">
-  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/900ecd3d-2354-40e5-8358-b3ee85a65adf">
+  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/05dbdb9d-bcf9-4154-85df-e465e7f518f4">
 </p>
 
 ## Development ideas
