@@ -10,7 +10,7 @@
 
 To achieve the results presented in this repository, the important phases of the project were as follows:
 
-- Use of main tools for timbre analysis, such as spectrograms, mel spectrograms, and spectral features.
+- Use of main tools for timbre analysis, such as spectrograms and mel spectrograms.
 - Development of the graphical interface: To bring together the tools developed in the previous stage in an easy and interactive manner, a graphical user interface [GUI](https://pt.wikipedia.org/wiki/Interface_gr%C3%A1fica_do_utilizador) was developed using the [MATLAB](https://www.mathworks.com/products/matlab.html) software through the [AppDesigner](https://www.mathworks.com/products/matlab/app-designer.html) tool. This interface assists in the analysis process by grouping the obtained results.
 
 App Designer is a MATLAB tool that enables the creation of graphical application interfaces. With AppDesigner, users can design user interfaces with a variety of graphical elements, such as buttons, text boxes, graphs, progress bars, and more. This allows for the creation of visually appealing and interactive applications that can be used for tasks such as data analysis, simulation, system control, and result visualization.
