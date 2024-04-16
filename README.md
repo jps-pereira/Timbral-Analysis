@@ -42,7 +42,7 @@ The process of publishing applications created in AppDesigner is also simplified
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/b1f5803c-4123-4c36-beba-0427b57fc6ad">
 </p>
 
-- Step 4: Final stage of feature extraction using the <code>Spec</code> and <code>Mel-spec</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
+- Step 4: Final stage of feature extraction using the <code>Spectrogram</code> and <code>Mel-spectrogram</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
 
 <p align="center">
   <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/05dbdb9d-bcf9-4154-85df-e465e7f518f4">
