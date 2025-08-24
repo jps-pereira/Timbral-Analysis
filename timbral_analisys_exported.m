@@ -1,17 +1,3 @@
-                % % % % % % % % % % %               
-                %  Timbral analysis %               
-                % % % % % % % % % % %  
-
-%-------------------------------------------------- %
-%     J.P. Pereira, V. Fernandes, T.N. Ferreira     %
-%       TET -  Universidade Federal Fluminense      %
-%---------------------------------------------------%
-%  This code was developed as a practical part of   %   
-%  my graduation thesis, it is a code exported from %
-%  the App Designer tool, for more information      %
-%  about how it works visit the link below:         %
-%  mathworks.com/products/matlab/app-designer.html  %          
-% --------------------------------------------------%
 classdef timbral_analisys_exported < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -136,16 +122,16 @@ if app.StartEditField.Value == 0 && app.EndEditField.Value == 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do dominio do tempo');
-    xlabel(app.Signal_Time,'tempo');
+    title(app.Signal_Time,'Time Domain');
+    xlabel(app.Signal_Time,'Time');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
     %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequencia');
+    xlabel(app.Signal_Frequency,'Frequency');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
+    title(app.Signal_Frequency,'Frequency Domain');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);    
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
@@ -166,16 +152,16 @@ elseif app.StartEditField.Value == 0 && app.EndEditField.Value ~= 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.07,0.18,0.25]);
-    title(app.Signal_Time,'Sinal do dominio do tempo');
-    xlabel(app.Signal_Time,'tempo');
+    title(app.Signal_Time,'Time Domain');
+    xlabel(app.Signal_Time,'Time');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
     %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequencia');
+    xlabel(app.Signal_Frequency,'Frequency');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
+    title(app.Signal_Frequency,'Frequency Domain');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
@@ -196,15 +182,15 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value == 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do dominio do tempo');
-    xlabel(app.Signal_Time,'tempo');
+    title(app.Signal_Time,'Time Domain');
+    xlabel(app.Signal_Time,'Time');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
     %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequencia');
+    xlabel(app.Signal_Frequency,'Frequency');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
+    title(app.Signal_Frequency,'Frenquency Domain');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
@@ -226,16 +212,16 @@ elseif app.StartEditField.Value ~= 0 && app.EndEditField.Value ~= 0
 
     %Tempo
     plot(app.Signal_Time,t,Sig,'Color',[0.64,0.08,0.18]);
-    title(app.Signal_Time,'Sinal do dominio do tempo');
-    xlabel(app.Signal_Time,'tempo');
+    title(app.Signal_Time,'Time Domain');
+    xlabel(app.Signal_Time,'Time');
     ylabel(app.Signal_Time,'Amplitude');
     set(app.Signal_Time,'xlim',[0, app.axistime.Value]);
 
     %Frequencia
     plot(app.Signal_Frequency,fq,signalFFT(1:length(fq)),'linew',2,'Color',[0.07,0.18,0.25]);
-    xlabel(app.Signal_Frequency,'Frequencia');
+    xlabel(app.Signal_Frequency,'Frequency');
     ylabel(app.Signal_Frequency,'Amplitude');
-    title(app.Signal_Frequency,'Sinal no Dominio da Frequencia');
+    title(app.Signal_Frequency,'Frequency Domain');
     set(app.Signal_Frequency,'xlim',[0, app.axisfrequency.Value]);
     app.Signal_spectrogram = Sig;
     app.Signal_mel = Sig;
@@ -448,7 +434,7 @@ if  Compute==true && Compute1==true && Compute2==true && Compute3==true
 
         % Callback function
         function spectraldescriptorsButtonPushed(app, event)
-
+            
         end
     end
 

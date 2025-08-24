@@ -1,38 +1,47 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1491860808" file="C:\Users\joaop\Documents\Repositorios\Timbral-Analysis\timbral_analysis.prj" location="C:\Users\joaop\Documents\Repositorios\Timbral-Analysis" name="timbral_analysis" target="target.mlapps" target-name="Package App">
-    <param.appname>timbral_analysis</param.appname>
+  <configuration build-checksum="161121027" file="C:\Users\joaop\Documents\Repositorios\Timbral-Analysis\Timbral analysis.prj" location="C:\Users\joaop\Documents\Repositorios\Timbral-Analysis" name="Timbral analysis" target="target.mlapps" target-name="Package App">
+    <param.appname>Timbral analysis</param.appname>
     <param.authnamewatermark>João Pedro Pereira</param.authnamewatermark>
-    <param.email>jp_pereira@id.uff.br</param.email>
-    <param.company>Universidade Federal Fluminense</param.company>
-    <param.icon>${PROJECT_ROOT}\timbral_analysis_resources\icon_24.png</param.icon>
+    <param.email />
+    <param.company />
+    <param.icon>${PROJECT_ROOT}\Timbral analysis_resources\icon_24.png</param.icon>
     <param.icons>
-      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_48.png</file>
-      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_24.png</file>
-      <file>${PROJECT_ROOT}\timbral_analysis_resources\icon_16.png</file>
+      <file>${PROJECT_ROOT}\Timbral analysis_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\Timbral analysis_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\Timbral analysis_resources\icon_16.png</file>
     </param.icons>
     <param.summary />
-    <param.description>The installation file generate a tool for spectral analysis of music signals, serving as a useful means for instrument timbre recognition and facilitating other projects related to applications in MIR (Musical Information Retrieval).</param.description>
-    <param.screenshot>C:\Users\joaop\AppData\Local\Temp\tpc44f3b8c_92eb_4087_b2b9_f473599a6ecd.png</param.screenshot>
+    <param.description />
+    <param.screenshot>C:\Users\joaop\AppData\Local\Temp\tp0b4b23c0_5b92_4ebb_b382_0a0af4b7cccc.png</param.screenshot>
     <param.version>5.0</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.output>C:\Users\joaop\Documents\Repositorios</param.output>
-    <param.guid>9405f2d0-3af5-4fd5-a85a-10ba9e8362fc</param.guid>
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>627bb08e-774b-480c-ba2d-b38812075aaf</param.guid>
     <unset>
+      <param.email />
+      <param.company />
       <param.summary />
+      <param.description />
       <param.products.name />
       <param.products.id />
       <param.products.version />
       <param.platforms />
+      <param.output />
     </unset>
-    <fileset.main />
-    <fileset.depfun />
+    <fileset.main>
+      <file>${PROJECT_ROOT}\timbral_analisys.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\botao-play.png</file>
+      <file>${PROJECT_ROOT}\pausa.png</file>
+    </fileset.depfun>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\joaop\Documents" name="Repositorios" optional="false">C:\Users\joaop\Documents\Repositorios</file>
+      <file location="C:\Users\joaop\Documents\Repositorios" name="Timbral-Analysis" optional="false">C:\Users\joaop\Documents\Repositorios\Timbral-Analysis</file>
     </build-deliverables>
     <workflow />
     <matlab>
