@@ -33,30 +33,16 @@ The process of publishing applications created in AppDesigner is also simplified
 - Step 2: If necessary, you can edit the audio by specifying the start and end times in the <code>Start</code> and <code>End</code> text boxes. This step permanently alters the signal for all subsequent functions, unlike the <code>sliders</code> that only display the desired segments based on their values. Whether or not the audio is edited, you can listen to the played audio using the <code>play</code> and <code>pause</code> buttons.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/2366f94c-9e72-4716-a344-54dca5ee7736">
-</p>
-
-<p align="center">
 <img width="365" height="300" alt="Passo 2" src="https://github.com/user-attachments/assets/1026c681-e08c-4b32-a7c5-491140fd0333" />
-
 </p>
 
 - Step 3: Define the windowing and filter bank parameters for extracting spectrogram and mel-spectrogram features. If any parameter is not specified, an error message will alert the user about which parameter needs to be filled in.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/b1f5803c-4123-4c36-beba-0427b57fc6ad">
-</p>
-
-<p align="center">
 <img width="365" height="300" alt="Passo 3" src="https://github.com/user-attachments/assets/c6f63b5e-331d-4780-a532-ed06565aa128" />
-
 </p>
 
 - Step 4: Final stage of feature extraction using the <code>Spectrogram</code> and <code>Mel-spectrogram</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
-
-<p align="center">
-  <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/05dbdb9d-bcf9-4154-85df-e465e7f518f4">
-</p>
 
 <p align="center">
 <img width="578" height="300" alt="Passo4" src="https://github.com/user-attachments/assets/ba551400-ea60-4bbf-b489-af0e947b3f5d" />
