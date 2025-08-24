@@ -30,6 +30,9 @@ The process of publishing applications created in AppDesigner is also simplified
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/8d0763b7-1af3-4877-8445-88fb15052ac0">
 </p>
 
+<img width="365" height="300" alt="Passo1" src="https://github.com/user-attachments/assets/d50194a1-12af-4588-95c7-c08edae11412" />
+
+
 - Step 2: If necessary, you can edit the audio by specifying the start and end times in the <code>Start</code> and <code>End</code> text boxes. This step permanently alters the signal for all subsequent functions, unlike the <code>sliders</code> that only display the desired segments based on their values. Whether or not the audio is edited, you can listen to the played audio using the <code>play</code> and <code>pause</code> buttons.
 
 <p align="center">
