@@ -27,10 +27,6 @@ The process of publishing applications created in AppDesigner is also simplified
 - Step 1: Choose the audio file to be read using the file button. Upon selecting the file, its name will be displayed in the text box, and information about the audio will be shown in the MATLAB command line. Execute the file reading by clicking the <code>Run</code> button , so that the signal is represented on the already displayed graphs in the interface, in both the time and frequency domains using the FFT algorithm. If the user does not set limits on the time and frequency <code>sliders</code>, a message box will appear to guide them towards a better decision, and by default, the frequency axis will use the value of 20 kHz, and the time axis will use 100 s.
 
 <p align="center">
-  <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/8d0763b7-1af3-4877-8445-88fb15052ac0">
-</p>
-
-<p align="center">
 <img width="365" height="300" alt="Passo1" src="https://github.com/user-attachments/assets/d50194a1-12af-4588-95c7-c08edae11412" />
 </p>
 
@@ -40,16 +36,31 @@ The process of publishing applications created in AppDesigner is also simplified
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/2366f94c-9e72-4716-a344-54dca5ee7736">
 </p>
 
+<p align="center">
+<img width="365" height="300" alt="Passo 2" src="https://github.com/user-attachments/assets/1026c681-e08c-4b32-a7c5-491140fd0333" />
+
+</p>
+
 - Step 3: Define the windowing and filter bank parameters for extracting spectrogram and mel-spectrogram features. If any parameter is not specified, an error message will alert the user about which parameter needs to be filled in.
 
 <p align="center">
   <img width="365" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/b1f5803c-4123-4c36-beba-0427b57fc6ad">
 </p>
 
+<p align="center">
+<img width="365" height="300" alt="Passo 3" src="https://github.com/user-attachments/assets/c6f63b5e-331d-4780-a532-ed06565aa128" />
+
+</p>
+
 - Step 4: Final stage of feature extraction using the <code>Spectrogram</code> and <code>Mel-spectrogram</code> buttons, allowing for the adjustment of parameters for a new feature extraction, enhancing the analysis with greater precision.
 
 <p align="center">
   <img width="578" height="300" src="https://github.com/jps-pereira/Timbral-Analysis/assets/145292371/05dbdb9d-bcf9-4154-85df-e465e7f518f4">
+</p>
+
+<p align="center">
+<img width="578" height="300" alt="Passo4" src="https://github.com/user-attachments/assets/ba551400-ea60-4bbf-b489-af0e947b3f5d" />
+
 </p>
 
 ## Development ideas
